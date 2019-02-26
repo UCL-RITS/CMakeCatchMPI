@@ -30,7 +30,7 @@ On Linux/Mac, in a terminal:
 git clone https://github.com/UCL-RITS/CMakeCatchMPI
 mkdir CMakeCatchMPI-Build
 cd CMakeCatchMPI-Build
-cmake ../CMakeCatchMPI
+cmake -DCMAKE_BUILD_TYPE=Debug ../CMakeCatchMPI
 make
 ```
 

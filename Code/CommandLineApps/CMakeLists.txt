@@ -14,6 +14,9 @@
 
 set(_command_line_apps
   ccmpiHelloWorld
+  ccmpiSSend
+  ccmpiSend
+  ccmpiISend
 )
 
 foreach(_app ${_command_line_apps})
