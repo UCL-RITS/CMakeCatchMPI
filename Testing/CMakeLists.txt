@@ -18,6 +18,7 @@ set(TMP_DIR ${CMAKE_BINARY_DIR}/Testing/Temporary)
 set(TEST_CASES
   ccmpiMyFunctionsTest
   ccmpiExampleMPITest
+  ccmpiP2PTest
 )
 
 foreach(_test_case ${TEST_CASES})
@@ -34,3 +35,4 @@ endforeach()
 
 add_test(MyFunctions ${EXECUTABLE_OUTPUT_PATH}/ccmpiMyFunctionsTest)
 add_test(ExampleMPI ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} ${MPIEXEC_MAX_NUMPROCS} ${EXECUTABLE_OUTPUT_PATH}/ccmpiExampleMPITest)
+add_test(P2P ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} ${MPIEXEC_MAX_NUMPROCS} ${EXECUTABLE_OUTPUT_PATH}/ccmpiP2PTest)

@@ -61,6 +61,7 @@ int main(int argc, char** argv)
     }
     if (rank == 1) {
        char buffer[256];
+       // Mini exercise: change this to use MPI_Irecv instead!
        int const error = MPI_Recv(
          buffer, 256, MPI_CHAR, 0, 42, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
        assert(error ==  MPI_SUCCESS);
