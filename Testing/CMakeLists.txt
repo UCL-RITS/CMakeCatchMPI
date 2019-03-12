@@ -21,6 +21,9 @@ set(TEST_CASES
   ccmpiP2PTest
   ccmpiRingTest
   ccmpiBroadcastTest
+  ccmpiScatterTest
+  ccmpiReduceTest
+  ccmpiSplitTest
 )
 
 foreach(_test_case ${TEST_CASES})
@@ -40,3 +43,6 @@ add_test(ExampleMPI ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} ${MPIEXEC_MAX_NUMPROCS} $
 add_test(P2P ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} ${MPIEXEC_MAX_NUMPROCS} ${EXECUTABLE_OUTPUT_PATH}/ccmpiP2PTest)
 add_test(Ring ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} ${MPIEXEC_MAX_NUMPROCS} ${EXECUTABLE_OUTPUT_PATH}/ccmpiRingTest)
 add_test(Broadcast ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} ${MPIEXEC_MAX_NUMPROCS} ${EXECUTABLE_OUTPUT_PATH}/ccmpiBroadcastTest)
+add_test(Scatter ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} ${MPIEXEC_MAX_NUMPROCS} ${EXECUTABLE_OUTPUT_PATH}/ccmpiScatterTest)
+add_test(Reduce ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} ${MPIEXEC_MAX_NUMPROCS} ${EXECUTABLE_OUTPUT_PATH}/ccmpiReduceTest)
+add_test(Split ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} ${MPIEXEC_MAX_NUMPROCS} ${EXECUTABLE_OUTPUT_PATH}/ccmpiSplitTest)
