@@ -44,9 +44,6 @@ TEST_CASE("Collective communications - broadcast")
         message = std::string(buffer);
     }
 
-    // Check the received message
-    CHECK(message == peace);
-
     // Round-robin checking, each process in turn, for nicer output
     for (int i(0); i < size; ++i)
     {
